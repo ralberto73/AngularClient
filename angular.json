@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AgMyBusiness"
+    }
+  },
+  "defaultProject": "AgMyBusiness",
+  "cli": {
+    "analytics": false
+  }
 }
