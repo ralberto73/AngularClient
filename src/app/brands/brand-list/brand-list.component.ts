@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+//import { EmployeeDetailsComponent } from '../employee-details/employee-details.component';
+import { Observable } from "rxjs";
+import { BrandService } from "../../services/brads.service";
+import { Brand } from "../../models/brand";
+//import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-brand-list',
@@ -7,9 +13,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandListComponent implements OnInit {
 
-  constructor() { }
+  brands: Observable<Brand[]>;   //  1  
+  
+  constructor(private brandService: BrandService,
+    private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.reloadData();
+  }
+  
+  reloadData() {
+    this.brands = this.brandService.getList();
   }
 
 }

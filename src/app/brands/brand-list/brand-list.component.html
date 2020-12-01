@@ -1,1 +1,34 @@
-<p>brand-list works!</p>
+
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Code</th>
+        <th>Code</th>
+        <th>Code</th>
+    </tr>
+    <tr *ngFor="let brand of brands | async">
+       <td>
+           {{brand.brandId}}
+       </td>
+       <td>
+           {{brand.brandName}}
+       </td>
+       <td>
+           {{brand.createdBy}}
+       </td>
+       <td>
+           {{brand.updatedBy}}
+       </td>
+       <td>
+           {{brand.creationDate  | date :'short'}}
+       </td>
+       <td>
+          {{brand.lastUpdateDate}} 
+      </td>
+
+    </tr>
+</table>
+
+
