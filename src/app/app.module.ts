@@ -9,6 +9,7 @@ import { CreateBrandComponent } from './brands/create-brand/create-brand.compone
 import { BrandDetailComponent } from './brands/brand-detail/brand-detail.component';
 import { BrandListComponent } from './brands/brand-list/brand-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,8 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
         // import HttpClientModule after BrowserModule.
-        HttpClientModule,
+        
   ],
   providers: [],
   bootstrap: [AppComponent]

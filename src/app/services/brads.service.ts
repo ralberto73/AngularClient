@@ -14,11 +14,11 @@ export class BrandService {
   getEmployee(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
-
-  createEmployee(employee: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, employee);
+*/
+createBrand(brand: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, brand);
   }
-
+/*
   updateEmployee(id: number, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
